@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Vanilla Javascript todo app</title>
+  </head>
+  <body>
+    <button class="theme-toggler"></button>
+    <main class="wrapper flex flex-column gap-m">
+      <h2 class="align-center">Todo List</h2>
+      <form action="/" method="post">
+        <!-- Why required attr doesn't work? -->
+        <input
+          type="text"
+          name="add-todo"
+          id="add-todo"
+          placeholder="Add new task..."
+          required
+          minlength="5"
+        />
+        <button class="with-border color-primary submit" type="submit">
+          add() +
+        </button>
+        <!-- <button class="with-border neutral reset" type="reset">
+          clear() -
+        </button> -->
+      </form>
+      <section class="todo-container flex flex-column gap-s">
+        <!-- <article class="todo flex">
+          <span class="todo-text">Do Homework</span>
+          <button class="no-border">delete()</button>
+        </article> -->
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
