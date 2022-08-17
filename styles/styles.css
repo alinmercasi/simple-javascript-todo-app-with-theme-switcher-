@@ -136,7 +136,7 @@ and better icon design, off course :) And get rid of that ugly border */
   border-radius: 50%;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  /* touch-action: manipulation; */
+  touch-action: manipulation;
   /* how to overcome the little border that creates around the moon? */
   overflow: hidden;
   transition: background-color 0.5s linear;
