@@ -25,7 +25,7 @@ Users should be able to:
 
 - Add, remove, toggle todos and save them to local storage
 - The app should detect user theme preference, apply it and save it to local storage
-  -Futhermore, user could change the theme and save it, no matter their system settings
+- Futhermore, user could change the theme and save it, no matter their system settings
 
 ### Screenshot
 
@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [View live demo](https://alinmercasi.github.io/order-summary-component-main/)
+- Live Site URL: [View live demo](https://alinmercasi.github.io/simple-javascript-todo-app-with-theme-switcher-/)
 
 ## My process
 
@@ -50,10 +50,10 @@ Users should be able to:
 
 - It helped me get some practice on how local storage work
 - Make good use of CSS custom properties
-- Understand some javascript events, as 'animationend'
+- Understand some javascript events, such as 'animationend'
 - Work with arrays and objects
 - Understand some javascript prototyping concepts working with classes
-- Working with DOM from javascript
+- Working with DOM in javascript
 - Basic state management
 - Make use of CSS animations, transforms and transitions
 
@@ -63,14 +63,14 @@ Users should be able to:
 - To be more organized :)
 - Practice, practice, practice!
   #### For this project
-  - I would like to use svg on theme toggler button for a smoother ux an to create more complex animations
-  - To be able to edit todos an update them in local storage. Maybe I would do this using 'contenteditable' attribute
+  - I would like to use svg on theme toggler button for a smoother ux and to create more complex animations
+  - To be able to edit todos and update them in local storage. Maybe I would do this using 'contenteditable' attribute
   - Add some micro interactions when some events are fired (ex: when adding or removing todos)
 
 ## Known bugs
 
 - That ugly border on the theme toggle button (it has something to do with overflow hidden on the button itself, but I can't figure out why yet)
-- On responsive mode, the theme toggle button register ehe click/tap even if you click like 50% percent of his height under it. Futhermore, sometimes does not register if you click on its top half.
+- On responsive mode, the theme toggle button register the click/tap even if it happens like 50% percent of his height under it. Futhermore, sometimes does not register it if you click on its top half.
 
 ## Author
 
