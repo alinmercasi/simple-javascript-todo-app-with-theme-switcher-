@@ -1,6 +1,6 @@
 # Todo app concept with theme toggler
 
-A small app concept idea just cu sharpen some of my skills
+A small app concept idea just to sharpen some of my skills
 
 ## Table of contents
 
@@ -15,6 +15,8 @@ A small app concept idea just cu sharpen some of my skills
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
       - [For this project](#for-this-project)
+    - [Known Bugs](#known-bugs)
+      - [Solved](#solved)
   - [Author](#author)
 
 ## Overview
