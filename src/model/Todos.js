@@ -1,10 +1,10 @@
 class Todos {
   constructor() {
-    this.todos = JSON.parse(localStorage.getItem("todos")) ?? [];
+    this.todos = JSON.parse(localStorage.getItem('todos')) ?? []
   }
 
   #update(todos) {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
 
   addTodo(text) {
@@ -12,18 +12,18 @@ class Todos {
       id: Date.now(),
       text,
       completed: false,
-    };
-    this.todos.push(todo);
-    this.#update(this.todos);
+    }
+    this.todos.push(todo)
+    this.#update(this.todos)
   }
 
   toggleTodo(id) {
-    this.todos = this.todos.map((todo) => {
+    this.todos = this.todos.map(todo => {
       return todo.id == id
         ? { id: todo.id, text: todo.text, completed: !todo.completed }
-        : todo;
-    });
-    this.#update(this.todos);
+        : todo
+    })
+    this.#update(this.todos)
   }
 
   // I cant make it work yet on DOM part. I want to set contenteditable to the text and get the value from there, but as far as I tried it's buggy. I will come back when I will get more experience on js
@@ -35,13 +35,13 @@ class Todos {
   // }
 
   deleteTodo(id) {
-    this.todos = this.todos.filter((todo) => todo.id != id);
-    this.#update(this.todos);
+    this.todos = this.todos.filter(todo => todo.id != id)
+    this.#update(this.todos)
   }
 
   getTodos() {
-    return this.todos;
+    return this.todos
   }
 }
 
-export default Todos;
+export default Todos
