@@ -1,4 +1,4 @@
-import { handleChangeInDom, handleClick } from "./components/themeSwitcher.js";
+import { handleChangeInDom, changeTheme } from "./components/themeSwitcher.js";
 import { DOM } from "./utils/globals.js";
 import {
   handleAdd,
@@ -16,5 +16,5 @@ window.addEventListener("load", () => {
 
   // theme toggler
   handleChangeInDom();
-  DOM.themeToggler.addEventListener("click", handleClick);
+  DOM.themeToggler.addEventListener("click", changeTheme);
 });

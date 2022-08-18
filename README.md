@@ -69,8 +69,11 @@ Users should be able to:
 
 ## Known bugs
 
-- That ugly border on the theme toggle button (it has something to do with overflow hidden on the button itself, but I can't figure out why yet)
-- On responsive mode, the theme toggle button register the click/tap even if it happens like 50% percent of his height under it. Futhermore, sometimes does not register it if you click on its top half.
+- On responsive mode (touch devices only), the theme toggle button register the click/tap even if it happens like 50% percent of his height under it. Futhermore, sometimes does not register it if you click on its top half.
+
+#### Solved
+
+- ~~That ugly border on the theme toggle button (it has something to do with overflow hidden ond border-radius on the button itself).~~ Background-clip set to content-box and a small padding seems to do the trick
 
 ## Author
 

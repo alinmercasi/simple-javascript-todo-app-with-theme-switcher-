@@ -1,15 +1,17 @@
 import { DOM } from "../utils/globals.js";
 
 // theme switcher
-const getPreference = () => {
+const getUserPreference = () => {
+  // check to see if there are settings for this app saved in local storage
   if (localStorage.getItem("theme")) return localStorage.getItem("theme");
+  // get system settings
   else
-    return window.matchMedia("(prefer-color-scheme: dark)").matches
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light";
 };
 
-let theme = getPreference();
+let theme = getUserPreference();
 
 export const handleChangeInDom = () => {
   document.firstElementChild.setAttribute("data-theme", theme);
@@ -21,7 +23,7 @@ const setPreference = () => {
   handleChangeInDom();
 };
 
-export const handleClick = () => {
+export const changeTheme = () => {
   theme = theme === "light" ? "dark" : "light";
   setPreference();
 };

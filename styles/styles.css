@@ -49,7 +49,7 @@ body {
 
 h2 {
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
   line-height: 1;
 }
 
@@ -60,7 +60,6 @@ input {
   border: 0;
   outline: 0;
   background: transparent;
-  vertical-align: baseline;
 }
 input {
   border-bottom: 1px solid var(--primary);
@@ -93,8 +92,10 @@ button::-moz-focus-inner {
 .gap-s {
   gap: var(--space-200);
 }
-.with-border.color-primary {
+.with-border {
   border: 1px solid var(--primary);
+}
+.color-primary {
   color: var(--primary);
 }
 
@@ -105,7 +106,7 @@ button::-moz-focus-inner {
 /* block */
 
 .wrapper {
-  width: min(95vw, fit-content);
+  width: min(95vw, 24rem);
 }
 .todo-text {
   flex: 1;
@@ -129,17 +130,20 @@ and better icon design, off course :) And get rid of that ugly border */
   background: var(--text-color);
   border: none;
   outline: none;
-  padding: 0;
+
   inline-size: var(--space-800);
   block-size: var(--space-800);
   aspect-ratio: 1;
   border-radius: 50%;
   cursor: pointer;
+  /* remove highlight color when active */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  /* how to overcome the little border that creates around the moon? */
   overflow: hidden;
-  transition: background-color 0.5s linear;
+  /* setting background-clip to content-box and a small padding seems to remove that ugly borer radius paired with overflow glitch */
+  background-clip: content-box;
+  padding: 0.2rem;
+  transition: background-color 0.3s linear;
 }
 .theme-toggler::before {
   --offset-top: calc(100% + 0.2rem);
@@ -154,11 +158,11 @@ and better icon design, off course :) And get rid of that ugly border */
   left: var(--offset-left);
 }
 .theme-toggler[aria-label="dark"]::before {
-  animation: toggle-in 0.5s forwards;
+  animation: toggle-in 0.3s forwards linear;
 }
 .theme-toggler[aria-label="light"]::before {
   /* I can't see why backwards on the initial animation does'n work */
-  animation: toggle-out 0.5s forwards;
+  animation: toggle-out 0.5s forwards linear;
 }
 @keyframes toggle-in {
   0% {
