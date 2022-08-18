@@ -62,6 +62,7 @@ Users should be able to:
 ### Continued development
 
 - To step into more advanced concepts of javascript DOM manipulation before learning any framework
+- Learn git! :)
 - To be more organized :)
 - Practice, practice, practice!
   #### For this project
