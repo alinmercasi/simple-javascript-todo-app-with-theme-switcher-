@@ -113,6 +113,10 @@ button::-moz-focus-inner {
   padding: 0.2rem 0;
 }
 
+form input {
+  flex: 1;
+}
+
 .todo[data-completed="true"] > .todo-text {
   opacity: 0.5;
   transition: opacity 0.125ms linear;
